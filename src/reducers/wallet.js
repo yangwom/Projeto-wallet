@@ -2,7 +2,8 @@
 import { TYPE_WALLET_CORRENCIES, TYPE_WALLET_EXPENSES } from '../actions';
 
 const INITIAL_STATE = {
-  currencies: [],
+  currencies: ['USD', 'CAD', 'EUR', 'GBP',
+    'ARS', 'BTC', 'LTC', 'JPY', 'CHF', 'AUD', 'CNY', 'ILS', 'ETH', 'XRP'],
   expenses: [],
 };
 

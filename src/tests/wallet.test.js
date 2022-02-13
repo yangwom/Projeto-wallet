@@ -66,7 +66,7 @@ describe('3 - Crie um header para a página de carteira contendo as seguintes ca
   });
 });
 
-describe.only('4 - Desenvolva um formulário para adicionar uma despesa contendo as seguintes características:', () => {
+describe('4 - Desenvolva um formulário para adicionar uma despesa contendo as seguintes características:', () => {
   test('Um campo para adicionar o valor da despesa', async () => {
     renderWithRouterAndStore(<Wallet />, '/carteira');
     const valueInput = await screen.findByTestId(VALUE_INPUT_TEST_ID);
@@ -234,7 +234,7 @@ describe('6 - Desenvolva uma tabela com os gastos contendo as seguintes caracter
   });
 });
 
-describe('7 - Implemente a lógica para que a tabela seja alimentada pelo estado da aplicação', () => {
+describe.only('7 - Implemente a lógica para que a tabela seja alimentada pelo estado da aplicação', () => {
   const initial = initialStateWithExpenses;
   test('A tabela deve ser alimentada pelo estado da aplicação, que estará disponível na chave expenses que vem do reducer wallet.', () => {
     renderWithRouterAndStore(<Wallet />, '/carteira', initial);

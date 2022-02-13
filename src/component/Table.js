@@ -49,7 +49,7 @@ const mapStateToProps = (state) => {
 };
 
 Table.propTypes = {
-  descriptionExpenses: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  descriptionExpenses: PropTypes.arrayOf(PropTypes.shape({}).isRequired).isRequired,
 };
 
-export default connect(mapStateToProps)(Table);
+export default connect(mapStateToProps, null)(Table);

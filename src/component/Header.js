@@ -3,29 +3,21 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 class Header extends Component {
-    valorTotal = () => {
-      const { walletData } = this.props;
-      let total = 0;
-      walletData.forEach((expense) => {
-        total += Number(expense.exchangeRates[expense.currency].ask)
-      * Number(expense.value);
-      });
-      return total;
-    }
-
-    render() {
-      const { user } = this.props;
-      return (
-        <header>
-          <h1> Trybe wallet </h1>
-          <h2 data-testid="email-field">
-            {`Olá, ${user}`}
-          </h2>
-          <h3 data-testid="total-field">{this.valorTotal().toFixed(2)}</h3>
-          <h3 data-testid="header-currency-field">BRL</h3>
-        </header>
-      );
-    }
+  render() {
+    const { user, walletData } = this.props;
+    const expenseAmount = walletData.reduce((cotacao, expense) => cotacao
+      + (expense.exchangeRates[expense.currency].ask * expense.value), 0);
+    return (
+      <header>
+        <h1> Trybe wallet </h1>
+        <h2 data-testid="email-field">
+          {`Olá, ${user}`}
+        </h2>
+        <h3 data-testid="total-field">{expenseAmount.toFixed(2)}</h3>
+        <h3 data-testid="header-currency-field">BRL</h3>
+      </header>
+    );
+  }
 }
 
 const mapStateToProps = (state) => {

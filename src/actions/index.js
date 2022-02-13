@@ -8,7 +8,7 @@ export const TYPE_ERROR = 'ERROR';
 
 export const login = (email) => ({ type: TYPE_LOGIN, payload: email });
 
-const deuRuim = (erro) => ({ type: TYPE_ERROR, erro });
+const deuRuim = () => ({ type: TYPE_ERROR });
 
 export const walletCurrencies = (currencies) => ({
   type: TYPE_WALLET_CORRENCIES,
@@ -27,6 +27,6 @@ export const fetchCota = (expenses) => async (dispatch) => {
       ...expenses, exchangeRates: data,
     }));
   } catch (error) {
-    dispatch(deuRuim(error));
+    dispatch(deuRuim());
   }
 };

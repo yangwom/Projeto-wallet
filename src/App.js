@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import Wallet from './pages/Wallet';
 
 class App extends Component {
+//  obrigado por mais um projeto maravilhoso trybe
   render() {
     return (
 

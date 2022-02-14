@@ -1,10 +1,8 @@
-/* eslint-disable indent */
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { FaCommentDollar } from 'react-icons/fa';
 import { login } from '../actions';
-import './App.css';
 
 class Login extends React.Component {
   constructor() {

@@ -1,7 +1,10 @@
+/* eslint-disable indent */
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { FaCommentDollar } from 'react-icons/fa';
 import { login } from '../actions';
+import './App.css';
 
 class Login extends React.Component {
   constructor() {
@@ -48,33 +51,52 @@ class Login extends React.Component {
   render() {
     const { email, disabled, password } = this.state;
     return (
-      <section>
-        <input
-          name="email"
-          data-testid="email-input"
-          onChange={ this.handleChange }
-          type="email"
-          placeholder="email"
-          value={ email }
-        />
+      <form className="form">
+        <div className="title-login">
+          <div style={ { display: 'flex' } }>
+            <h1 style={ { fontSize: '50px' } }> Trybe wallet  </h1>
+            <FaCommentDollar style={ { fontSize: '30px' } } />
+          </div>
+          <h1 style={ { fontSize: '54px', marginRight: '10px', marginTop: '100px' } }>
+            Faça seu login
+            <br />
+            na carteira
+          </h1>
+        </div>
+        <div className="login-inputs">
+          <div className="login-content">
+            <FaCommentDollar className="svg" />
+            <input
+              className="input-name"
+              name="email"
+              data-testid="email-input"
+              onChange={ this.handleChange }
+              type="email"
+              placeholder="Email"
+              value={ email }
+            />
 
-        <input
-          name="password"
-          data-testid="password-input"
-          type="password"
-          value={ password }
-          placeholder="senha "
-          onChange={ this.handleChange }
-        />
-        <button
-          disabled={ disabled }
-          type="button"
-          onClick={ this.click }
-        >
-          Entrar
+            <input
+              className="input-name"
+              name="password"
+              data-testid="password-input"
+              type="password"
+              value={ password }
+              placeholder="Senha "
+              onChange={ this.handleChange }
+            />
+            <button
+              className="bnt"
+              disabled={ disabled }
+              type="button"
+              onClick={ this.click }
+            >
+              Entrar
 
-        </button>
-      </section>);
+            </button>
+          </div>
+        </div>
+      </form>);
   }
 }
 Login.propTypes = {

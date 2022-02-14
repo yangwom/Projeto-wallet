@@ -5,6 +5,7 @@ export const TYPE_LOGIN = 'TYPE_LOGIN';
 export const TYPE_WALLET_CORRENCIES = 'TYPE_WALLET_CORRENCIES';
 export const TYPE_WALLET_EXPENSES = 'TTYPE_WALLET_EXPENSES';
 export const TYPE_ERROR = 'ERROR';
+export const TYPE_DELETE_EXPENSE = 'DELETE_EXPENSE';
 
 export const login = (email) => ({ type: TYPE_LOGIN, payload: email });
 
@@ -18,6 +19,11 @@ export const walletCurrencies = (currencies) => ({
 const walletExpenses = (expenses) => ({
   type: TYPE_WALLET_EXPENSES,
   payload: expenses,
+});
+
+export const removeExpense = (newArray) => ({
+  type: TYPE_DELETE_EXPENSE,
+  payload: newArray,
 });
 
 export const fetchCota = (expenses) => async (dispatch) => {

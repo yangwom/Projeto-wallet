@@ -7,7 +7,7 @@
 
 body {
   background-color: rgb(18, 18, 20);
-  color: #ffffffff;
+  color: #fff;
 }
 
 .component-header {
@@ -58,8 +58,8 @@ body {
 .login-content {
   display: flex;
   flex-direction: column;
-  margin: 0px auto;
   height: 200px;
+  margin: 0px auto;
 }
 
 .login-inputs {
@@ -68,42 +68,42 @@ body {
   flex-direction: column;
   border-radius: 5px;
   max-width: 480px;
-  width: 100%;
   padding: 64px;
+  width: 100%;
 }
 
 .input-name {
   margin: 5px;
   background: rgb(12, 12, 14);
-  color: rgb(255, 255, 255);
   background-color: rgb(18, 18, 20);
+  color: white;
   font-size: 16px;
   height: 100px;
-  width: 100%;
   border-radius: 5px;
+  width: 100%;
   padding: 0px 16px 0px 42.4px;
 }
 
 .svg {
-  font-size: 80px;
   color: #8257e5;
+  font-size: 80px;
   margin: 0px auto;
 }
 
 .bnt {
-  margin: 0px auto;
   background: #8257e5;
-  margin-top: 10px;
-  color: #ffffffff;
+  margin: 0px auto;
+  color: #fff;
   border-radius: 5px;
-  font-weight: bold;
+  margin-top: 10px;
   font-size: 16px;
+  font-weight: bold;
   height: 100px;
-  width: 50%;
   cursor: pointer;
-  text-transform: uppercase;
-  font-family: Roboto, sans-serif;
+  width: 50%;
   border: none;
+  font-family: Roboto, sans-serif;
+  text-transform: uppercase;
 }
 
 button:disabled {
@@ -111,9 +111,9 @@ button:disabled {
 }
 
 table {
-  width: 98%;
-  margin: 10px auto;
   border-radius: 5px;
+  margin: 10px auto;
+  width: 98%;
   box-shadow: 0 0 5px rgb(10, 10, 10);
 }
 
@@ -139,17 +139,17 @@ label {
 
 .bnt-wallet {
   background: #8257e5;
-  color: #ffffffff;
+  color: #fff;
   border-radius: 5px;
-  width: 150px;
   border: none;
+  width: 150px;
   font-size: 17px;
 }
 
 tr {
   display: flex;
   border-top: 2px solid black;
-  justify-content: space-around;
   box-shadow: 0 0 10px 5px rgb(32, 32, 36);
+  justify-content: space-around;
   padding: 10px 0;
 }

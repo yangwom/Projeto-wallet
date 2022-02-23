@@ -3,6 +3,8 @@ import { Route, Switch } from 'react-router-dom';
 import Login from './pages/Login';
 import Wallet from './pages/Wallet';
 
+import './App.css';
+
 class App extends Component {
 //  obrigado por mais um projeto maravilhoso trybe
   render() {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { HiOutlineTrash } from 'react-icons/hi';
 import { removeExpense } from '../actions';
 
 class Table extends Component {
@@ -16,26 +17,31 @@ removeToList = (id) => {
 render() {
   const TABELA = ['Descrição', 'Tag', 'Moeda', 'Método de pagamento',
     'Valor', 'Câmbio utilizado',
-    'Valor convertido', 'Moeda de conversão', 'Editar/Excluir'];
+    'Valor convertido', 'Moeda de conversão', 'Excluir'];
   const { descriptionExpenses } = this.props;
   return (
     <table>
       <thead>
-        <tr>
+        <tr className="table-descripition">
           {
-            TABELA.map((description, index) => <th key={ index }>{description}</th>)
+            TABELA.map((description, index) => (
+
+              <th key={ index }>{description}</th>
+
+            ))
           }
         </tr>
       </thead>
       <tbody>
+        {console.log(descriptionExpenses)}
         { descriptionExpenses.map((expenses) => (
-          <tr key={ expenses.id } id={ expenses.id }>
+          <tr className="expenses" key={ expenses.id } id={ expenses.id }>
             <td>{expenses.description}</td>
             <td>{expenses.tag}</td>
             <td>{expenses.currency}</td>
             <td>{expenses.method}</td>
             <td>{Number(expenses.value).toFixed(2)}</td>
-            <td>{expenses.exchangeRates[expenses.currency].name.split('/')[0]}</td>
+            <td>{(expenses.exchangeRates[expenses.currency].name.split('/')[0])}</td>
             <td>{Number(expenses.exchangeRates[expenses.currency].ask).toFixed(2)}</td>
             <td>
               {Number(expenses.exchangeRates[expenses.currency].ask
@@ -45,11 +51,12 @@ render() {
             <td>Real</td>
             <td>
               <button
+                style={ { backgroundColor: 'red', color: 'white', border: 'none' } }
                 type="button"
                 data-testid="delete-btn"
                 onClick={ () => this.removeToList(expenses.id) }
               >
-                Excluir
+                <HiOutlineTrash />
               </button>
 
             </td>

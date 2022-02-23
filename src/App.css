@@ -1,8 +1,8 @@
 * {
   box-sizing: border-box;
   font-size: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
   display: flex;
   font-size: 12px;
   justify-content: space-between;
-  padding: 20px 20px;
+  padding: 20px;
 }
 
 .title-login {
@@ -65,21 +65,21 @@ body {
 .login-inputs {
   background-color: rgb(32, 32, 36);
   display: flex;
-  flex-direction: column;
   border-radius: 5px;
+  flex-direction: column;
   max-width: 480px;
   padding: 64px;
   width: 100%;
 }
 
 .input-name {
-  margin: 5px;
   background: rgb(12, 12, 14);
   background-color: rgb(18, 18, 20);
   color: white;
+  margin: 5px;
   font-size: 16px;
-  height: 100px;
   border-radius: 5px;
+  height: 100px;
   width: 100%;
   padding: 0px 16px 0px 42.4px;
 }
@@ -92,14 +92,14 @@ body {
 
 .bnt {
   background: #8257e5;
+  color: white;
   margin: 0px auto;
-  color: #fff;
   border-radius: 5px;
-  margin-top: 10px;
   font-size: 16px;
+  margin-top: 10px;
   font-weight: bold;
-  height: 100px;
   cursor: pointer;
+  height: 100px;
   width: 50%;
   border: none;
   font-family: Roboto, sans-serif;
@@ -112,9 +112,9 @@ button:disabled {
 
 table {
   border-radius: 5px;
+  box-shadow: 0px 0px 5px rgb(10, 10, 10);
   margin: 10px auto;
   width: 98%;
-  box-shadow: 0 0 5px rgb(10, 10, 10);
 }
 
 form {
@@ -129,17 +129,17 @@ label {
 }
 
 .inputs {
-  text-align: center;
-  width: 100px;
-  margin: 5px;
-  border-radius: 5px;
   border: none;
   background-color: rgb(126, 117, 117);
+  text-align: center;
+  width: 100px;
+  border-radius: 5px;
+  margin: 5px;
 }
 
 .bnt-wallet {
   background: #8257e5;
-  color: #fff;
+  color: white;
   border-radius: 5px;
   border: none;
   width: 150px;
@@ -147,9 +147,9 @@ label {
 }
 
 tr {
-  display: flex;
   border-top: 2px solid black;
-  box-shadow: 0 0 10px 5px rgb(32, 32, 36);
+  display: flex;
+  box-shadow: 0px 0px 10px 5px rgb(32, 32, 36);
   justify-content: space-around;
-  padding: 10px 0;
+  padding: 10px ;
 }

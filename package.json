@@ -25,7 +25,7 @@
     "stylelint-order": "4.1.0"
   },
 
-  "homepage": "https:\/\/username.github.io/app-toot-name",
+  "homepage": "https:yangwom.github.io/Projeto-wallet",
    "scripts": {
       
   "predeploy": "npm run build",

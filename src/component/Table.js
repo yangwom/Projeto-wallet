@@ -42,10 +42,9 @@ render() {
             <td>{(expenses.exchangeRates[expenses.currency].name.split('/')[0])}</td>
             <td>{Number(expenses.exchangeRates[expenses.currency].ask).toFixed(2)}</td>
             <td>
-              {Number(expenses.exchangeRates[expenses.currency].ask
-                  * expenses.value).toFixed(2)}
+              {`${Number(expenses.exchangeRates[expenses.currency].ask
+                  * expenses.value).toFixed(2)} Real`}
             </td>
-            <td>Real</td>
             <td>
               <button
                 style={ { backgroundColor: 'red', color: 'white', border: 'none' } }

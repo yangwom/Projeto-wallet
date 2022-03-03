@@ -55,7 +55,7 @@ class Login extends React.Component {
             <h1 style={ { fontSize: '50px' } }> Trybe wallet  </h1>
             <FaCommentDollar style={ { fontSize: '30px' } } />
           </div>
-          <h1 style={ { fontSize: '54px', marginRight: '10px', marginTop: '100px' } }>
+          <h1 style={ { fontSize: '54px', marginRight: '30px', marginTop: '100px' } }>
             Faça seu login
             <br />
             na carteira

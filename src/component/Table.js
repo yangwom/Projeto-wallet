@@ -6,7 +6,6 @@ import { removeExpense } from '../actions';
 
 class Table extends Component {
 removeToList = (id) => {
-  console.log(id);
   const { descriptionExpenses: listExpenses, deleteDispatch } = this.props;
   const NEW_ARRAY_EXPENSES = listExpenses.filter((newExpenses) => newExpenses.id
   !== id);
@@ -33,7 +32,6 @@ render() {
         </tr>
       </thead>
       <tbody>
-        {console.log(descriptionExpenses)}
         { descriptionExpenses.map((expenses) => (
           <tr className="expenses" key={ expenses.id } id={ expenses.id }>
             <td>{expenses.description}</td>
@@ -46,7 +44,6 @@ render() {
             <td>
               {Number(expenses.exchangeRates[expenses.currency].ask
                   * expenses.value).toFixed(2)}
-
             </td>
             <td>Real</td>
             <td>

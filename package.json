@@ -1,5 +1,6 @@
 {
   "name": "sd-0x-project-trybewallet",
+  "homepage": "https:yangwom.github.io/Projeto-wallet",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -25,11 +26,11 @@
     "stylelint-order": "4.1.0"
   },
 
-  "homepage": "https:yangwom.github.io/Projeto-wallet",
+ 
    "scripts": {
       
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build",
+   "predeploy": "npm run build",
+   "deploy": "gh-pages -d build",
 
     "start": "react-scripts start",
     "build": "react-scripts build",

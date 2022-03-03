@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Projeto-wallet/static/css/main.d09563ee.chunk.css",
-    "main.js": "/Projeto-wallet/static/js/main.eec25b91.chunk.js",
-    "main.js.map": "/Projeto-wallet/static/js/main.eec25b91.chunk.js.map",
-    "runtime-main.js": "/Projeto-wallet/static/js/runtime-main.f9006dff.js",
-    "runtime-main.js.map": "/Projeto-wallet/static/js/runtime-main.f9006dff.js.map",
-    "static/js/2.deb961a5.chunk.js": "/Projeto-wallet/static/js/2.deb961a5.chunk.js",
-    "static/js/2.deb961a5.chunk.js.map": "/Projeto-wallet/static/js/2.deb961a5.chunk.js.map",
-    "index.html": "/Projeto-wallet/index.html",
-    "precache-manifest.634212dd66ea80e733a2df4ce6eedb00.js": "/Projeto-wallet/precache-manifest.634212dd66ea80e733a2df4ce6eedb00.js",
-    "service-worker.js": "/Projeto-wallet/service-worker.js",
-    "static/css/main.d09563ee.chunk.css.map": "/Projeto-wallet/static/css/main.d09563ee.chunk.css.map",
-    "static/js/2.deb961a5.chunk.js.LICENSE.txt": "/Projeto-wallet/static/js/2.deb961a5.chunk.js.LICENSE.txt"
+    "main.css": "/app-toot-name/static/css/main.d09563ee.chunk.css",
+    "main.js": "/app-toot-name/static/js/main.9f7ae417.chunk.js",
+    "main.js.map": "/app-toot-name/static/js/main.9f7ae417.chunk.js.map",
+    "runtime-main.js": "/app-toot-name/static/js/runtime-main.cfc30c8d.js",
+    "runtime-main.js.map": "/app-toot-name/static/js/runtime-main.cfc30c8d.js.map",
+    "static/js/2.deb961a5.chunk.js": "/app-toot-name/static/js/2.deb961a5.chunk.js",
+    "static/js/2.deb961a5.chunk.js.map": "/app-toot-name/static/js/2.deb961a5.chunk.js.map",
+    "index.html": "/app-toot-name/index.html",
+    "precache-manifest.d18a7c1086a21c3dbc1ae33b151300a1.js": "/app-toot-name/precache-manifest.d18a7c1086a21c3dbc1ae33b151300a1.js",
+    "service-worker.js": "/app-toot-name/service-worker.js",
+    "static/css/main.d09563ee.chunk.css.map": "/app-toot-name/static/css/main.d09563ee.chunk.css.map",
+    "static/js/2.deb961a5.chunk.js.LICENSE.txt": "/app-toot-name/static/js/2.deb961a5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.f9006dff.js",
+    "static/js/runtime-main.cfc30c8d.js",
     "static/js/2.deb961a5.chunk.js",
     "static/css/main.d09563ee.chunk.css",
-    "static/js/main.eec25b91.chunk.js"
+    "static/js/main.9f7ae417.chunk.js"
   ]
 }

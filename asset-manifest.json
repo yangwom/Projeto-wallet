@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/app-toot-name/static/css/main.d09563ee.chunk.css",
-    "main.js": "/app-toot-name/static/js/main.9f7ae417.chunk.js",
-    "main.js.map": "/app-toot-name/static/js/main.9f7ae417.chunk.js.map",
-    "runtime-main.js": "/app-toot-name/static/js/runtime-main.cfc30c8d.js",
-    "runtime-main.js.map": "/app-toot-name/static/js/runtime-main.cfc30c8d.js.map",
-    "static/js/2.deb961a5.chunk.js": "/app-toot-name/static/js/2.deb961a5.chunk.js",
-    "static/js/2.deb961a5.chunk.js.map": "/app-toot-name/static/js/2.deb961a5.chunk.js.map",
-    "index.html": "/app-toot-name/index.html",
-    "precache-manifest.d18a7c1086a21c3dbc1ae33b151300a1.js": "/app-toot-name/precache-manifest.d18a7c1086a21c3dbc1ae33b151300a1.js",
-    "service-worker.js": "/app-toot-name/service-worker.js",
-    "static/css/main.d09563ee.chunk.css.map": "/app-toot-name/static/css/main.d09563ee.chunk.css.map",
-    "static/js/2.deb961a5.chunk.js.LICENSE.txt": "/app-toot-name/static/js/2.deb961a5.chunk.js.LICENSE.txt"
+    "main.css": "/yangwom.github.io/Projeto-wallet/static/css/main.d09563ee.chunk.css",
+    "main.js": "/yangwom.github.io/Projeto-wallet/static/js/main.e16c5546.chunk.js",
+    "main.js.map": "/yangwom.github.io/Projeto-wallet/static/js/main.e16c5546.chunk.js.map",
+    "runtime-main.js": "/yangwom.github.io/Projeto-wallet/static/js/runtime-main.51def82c.js",
+    "runtime-main.js.map": "/yangwom.github.io/Projeto-wallet/static/js/runtime-main.51def82c.js.map",
+    "static/js/2.df3bdd99.chunk.js": "/yangwom.github.io/Projeto-wallet/static/js/2.df3bdd99.chunk.js",
+    "static/js/2.df3bdd99.chunk.js.map": "/yangwom.github.io/Projeto-wallet/static/js/2.df3bdd99.chunk.js.map",
+    "index.html": "/yangwom.github.io/Projeto-wallet/index.html",
+    "precache-manifest.504346a5acdc022fb83f3940af08b493.js": "/yangwom.github.io/Projeto-wallet/precache-manifest.504346a5acdc022fb83f3940af08b493.js",
+    "service-worker.js": "/yangwom.github.io/Projeto-wallet/service-worker.js",
+    "static/css/main.d09563ee.chunk.css.map": "/yangwom.github.io/Projeto-wallet/static/css/main.d09563ee.chunk.css.map",
+    "static/js/2.df3bdd99.chunk.js.LICENSE.txt": "/yangwom.github.io/Projeto-wallet/static/js/2.df3bdd99.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.cfc30c8d.js",
-    "static/js/2.deb961a5.chunk.js",
+    "static/js/runtime-main.51def82c.js",
+    "static/js/2.df3bdd99.chunk.js",
     "static/css/main.d09563ee.chunk.css",
-    "static/js/main.9f7ae417.chunk.js"
+    "static/js/main.e16c5546.chunk.js"
   ]
 }

@@ -24,10 +24,13 @@
     "redux-thunk": "2.3.0",
     "stylelint-order": "4.1.0"
   },
-  "homepage": "https://yangwom.github.io/Projeto-wallet",
-  "scripts": {
-   "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+
+  "homepage": "https:\/\/username.github.io/app-toot-name",
+   "scripts": {
+      
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
+
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

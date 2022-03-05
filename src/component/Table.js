@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { HiOutlineTrash } from 'react-icons/hi';
 import { removeExpense } from '../actions';
 
-class Table extends Component {
-removeToList = (id) => {
-  const { descriptionExpenses: listExpenses, deleteDispatch } = this.props;
-  const NEW_ARRAY_EXPENSES = listExpenses.filter((newExpenses) => newExpenses.id
-  !== id);
-  console.log(NEW_ARRAY_EXPENSES);
-  deleteDispatch(NEW_ARRAY_EXPENSES);
-}
+function Table() {
+  const dispatch = useDispatch();
+  const allExpenses = useSelector(({ wallet: { expenses } }) => expenses);
 
-render() {
+  const removeToList = (id) => {
+    const NEW_ARRAY_EXPENSES = allExpenses.filter((newExpenses) => newExpenses.id
+  !== id);
+    dispatch(removeExpense(NEW_ARRAY_EXPENSES));
+  };
+
   const TABELA = ['Descrição', 'Tag', 'Moeda', 'Método de pagamento',
     'Valor', 'Câmbio utilizado',
     'Valor convertido', 'Moeda de conversão', 'Excluir'];
-  const { descriptionExpenses } = this.props;
+
+  console.log(allExpenses);
   return (
     <table>
       <thead>
@@ -32,25 +32,25 @@ render() {
         </tr>
       </thead>
       <tbody>
-        { descriptionExpenses.map((expenses) => (
-          <tr className="expenses" key={ expenses.id } id={ expenses.id }>
-            <td>{expenses.description}</td>
-            <td>{expenses.tag}</td>
-            <td>{expenses.currency}</td>
-            <td>{expenses.method}</td>
-            <td>{Number(expenses.value).toFixed(2)}</td>
-            <td>{(expenses.exchangeRates[expenses.currency].name.split('/')[0])}</td>
-            <td>{Number(expenses.exchangeRates[expenses.currency].ask).toFixed(2)}</td>
+        { allExpenses.map((expense) => (
+          <tr className="expenses" key={ expense.id } id={ expense.id }>
+            <td>{expense.description}</td>
+            <td>{expense.tag}</td>
+            <td>{expense.currency}</td>
+            <td>{expense.method}</td>
+            <td>{Number(expense.value).toFixed(2)}</td>
+            <td>{(expense.exchangeRates[expense.currency].name.split('/')[0])}</td>
+            <td>{Number(expense.exchangeRates[expense.currency].ask).toFixed(2)}</td>
             <td>
-              {`${Number(expenses.exchangeRates[expenses.currency].ask
-                  * expenses.value).toFixed(2)} Real`}
+              {`${Number(expense.exchangeRates[expense.currency].ask
+                  * expense.value).toFixed(2)} Real`}
             </td>
             <td>
               <button
                 style={ { backgroundColor: 'red', color: 'white', border: 'none' } }
                 type="button"
                 data-testid="delete-btn"
-                onClick={ () => this.removeToList(expenses.id) }
+                onClick={ () => removeToList(expense.id) }
               >
                 <HiOutlineTrash />
               </button>
@@ -61,22 +61,5 @@ render() {
       </tbody>
     </table>);
 }
-}
 
-const mapStateToProps = (state) => {
-  const { wallet: { expenses } } = state;
-  return {
-    descriptionExpenses: expenses,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => ({
-  deleteDispatch: (delet) => dispatch(removeExpense(delet)),
-});
-
-Table.propTypes = {
-  descriptionExpenses: PropTypes.arrayOf(PropTypes.shape({}).isRequired).isRequired,
-  deleteDispatch: PropTypes.func.isRequired,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Table);
+export default Table;

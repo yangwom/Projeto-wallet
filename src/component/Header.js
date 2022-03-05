@@ -1,49 +1,33 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import { FaCommentDollar } from 'react-icons/fa';
 
-class Header extends Component {
-  render() {
-    const { user, walletData } = this.props;
-    const expenseAmount = walletData.reduce((cotacao, expense) => cotacao
+function Header() {
+  const user = useSelector(({ user: { email } }) => email);
+  const walletData = useSelector(({ wallet: { expenses } }) => expenses);
+  console.log(walletData);
+  const expenseAmount = walletData.reduce((cotacao, expense) => cotacao
       + (expense.exchangeRates[expense.currency].ask * expense.value), 0);
 
-    return (
-      <header className="component-header">
-        <div className="title">
-          <h1> Trybe wallet </h1>
-          <FaCommentDollar className="svg-header" />
-        </div>
+  return (
+    <header className="component-header">
+      <div className="title">
+        <h1> Trybe wallet </h1>
+        <FaCommentDollar className="svg-header" />
+      </div>
 
-        <h2 className="email" data-testid="email-field">
-          {`Olá, ${user}`}
-        </h2>
-        <div className="total-field">
-          <h3 data-testid="total-field">
-            {` Dispesa Total : ${expenseAmount.toFixed(2)}`}
-          </h3>
+      <h2 className="email" data-testid="email-field">
+        {`Olá, ${user}`}
+      </h2>
+      <div className="total-field">
+        <h3 data-testid="total-field">
+          {` Dispesa Total : ${expenseAmount.toFixed(2)}`}
+        </h3>
 
-          <h3 data-testid="header-currency-field">BRL</h3>
-        </div>
-      </header>
-    );
-  }
+        <h3 data-testid="header-currency-field">BRL</h3>
+      </div>
+    </header>
+  );
 }
 
-const mapStateToProps = (state) => {
-  const { user: { email } } = state;
-  const { wallet: { expenses } } = state;
-  return {
-    user: email,
-    walletData: expenses,
-
-  };
-};
-
-Header.propTypes = {
-  user: PropTypes.string.isRequired,
-  walletData: PropTypes.arrayOf(PropTypes.shape({}).isRequired).isRequired,
-};
-
-export default connect(mapStateToProps)(Header);
+export default Header;

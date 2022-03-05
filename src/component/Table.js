@@ -17,7 +17,6 @@ function Table() {
     'Valor', 'Câmbio utilizado',
     'Valor convertido', 'Moeda de conversão', 'Excluir'];
 
-  console.log(allExpenses);
   return (
     <table>
       <thead>

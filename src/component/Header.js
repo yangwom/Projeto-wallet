@@ -4,8 +4,9 @@ import { FaCommentDollar } from 'react-icons/fa';
 
 function Header() {
   const user = useSelector(({ user: { email } }) => email);
+
   const walletData = useSelector(({ wallet: { expenses } }) => expenses);
-  console.log(walletData);
+
   const expenseAmount = walletData.reduce((cotacao, expense) => cotacao
       + (expense.exchangeRates[expense.currency].ask * expense.value), 0);
 

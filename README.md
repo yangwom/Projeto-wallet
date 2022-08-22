@@ -10,4 +10,4 @@ tecnologias usadas
 - redux
 - hooks
 
-venha conhecer: :point_right: [trybe wallet]()
+venha conhecer: :point_right: [trybe wallet](https://yangwom.github.io/Projeto-wallet/)

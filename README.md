@@ -11,3 +11,5 @@ tecnologias usadas
 - hooks
 
 venha conhecer: :point_right: [trybe wallet](https://yangwom.github.io/Projeto-wallet/)
+
+OBS: ##### pode colocar qualquer senha e email
